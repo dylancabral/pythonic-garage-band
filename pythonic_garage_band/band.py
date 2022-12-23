@@ -3,7 +3,8 @@ class Band:
         self.name = name
         self.members = members or []
 
-
+    def play_solos(self):
+        return [member.play_solo() for member in self.members]
 # base class
 class Musician(Band):
     def __init__(self, name, instrument, solo, solos):
